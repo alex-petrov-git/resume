@@ -1,0 +1,301 @@
+% use XeLaTeX
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage[russian]{babel}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{fontawesome5}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{tablefootnote}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+
+
+
+
+\setmainfont{Calibri}
+\geometry{top=0.7cm, bottom=1cm, left=1.5cm, right=1.5cm}
+% Тёмная тема: фон и цвета
+\pagecolor[RGB]{30,30,30} % Тёмно-серый фон
+\color{white} % Основной текст белый
+% Настройка стилей заголовков
+\titleformat{\section}{\Large\bfseries\color{violet}}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{violet}}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsubsection}{\bfseries\color{violet}}{\thesection}{1em}{}[]
+% Цвета для тёмной темы
+\definecolor{textblue}{RGB}{173, 216, 230} % Светло-голубой для имени
+\definecolor{lightblue}{RGB}{50,50,50} % Тёмный фон для контактов
+\definecolor{linkcolor}{RGB}{200, 162, 200} % Светло-фиолетовый для ссылок
+\definecolor{linkvisited}{RGB}{221, 160, 221} % Ещё светлее для посещенных
+\definecolor{violet}{RGB}{200, 162, 200} % Фиолетовый для акцентов
+\definecolor{purple}{RGB}{200, 162, 200} % То же для совместимости
+\definecolor{pagecolor}{RGB}{30, 30, 30}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\columnsep}{0cm}
+\pagestyle{empty}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=linkcolor,filecolor=linkcolor,urlcolor=linkcolor,citecolor=linkcolor,pdftitle={Резюме Петрова Александра Глебовича},pdfpagemode=FullScreen}
+% Стиль блока для аннотации в тёмной теме (компактно)
+\tcbset{myblock/.style={colframe=violet,colback=pagecolor,coltext=white,left=10pt,sharp corners,before skip=10pt,after skip=10pt,boxrule=0.3mm}}
+\setcounter{secnumdepth}{0}
+\begin{document}
+	%\colorbox{lightblue}{%
+		\raggedright % For fixing overfull/underfull hbox
+		%\hspace{0.3cm}
+		\begin{minipage}{0.65\textwidth} % латинская 'c'
+			\vspace{0.5cm}
+			
+			{\fontsize{40}{40}\selectfont\color{textblue}\textbf{Петров Александр}}
+			
+			\vspace{0.3cm} 
+			
+			{\fontsize{40}{40}\selectfont\color{textblue}\textbf{Глебович}}
+			\vspace{0.6cm}
+			
+			% блок контактов
+			\begin{tabular}{@{}l l l l@{}}
+				\faMapMarker\ & \raisebox{0.1ex}{{\href{https://yandex.ru/maps/-/CHtXE-JQ}{Москва, Зюзино}}} 
+				& \faEnvelope\ & \raisebox{0.2ex}{\href{mailto:petrov.aleksandr@phystech.edu}{petrov.aleksandr@phystech.edu}} \\
+			\end{tabular}
+			
+			\vspace{0.2cm}
+			\begin{tabular}{@{}l l l l l l@{}}
+				\faPhone\ & \href{tel:+79251457290}{+79251457290} 
+				& \faTelegram\ & \raisebox{0.2ex}{\href{https://t.me/petrovortex}{@petrovortex}} & \faGithub\ & \raisebox{0.2ex}{\href{https://github.com/alex-petrov-git}{alex-petrov-git}} \\
+			\end{tabular}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.315\textwidth}
+			\vspace{0pt}
+			\raggedleft
+			\begin{tikzpicture}
+				\node[regular polygon,
+				regular polygon sides=6,
+				draw=violet,
+				line width=0.8mm,
+				fill=lightblue,
+				inner sep=0pt,
+				minimum size=5.5cm,
+				path picture={
+					\node at (path picture bounding box.center){
+						\includegraphics[width=3.3cm]{photo.png}
+					};
+				}] {};
+			\end{tikzpicture}
+		\end{minipage}
+		
+	%}
+	\vspace{0.5cm}
+	
+	% Рамка с аннотацией
+	\begin{tcolorbox}[myblock]
+		\setstretch{1.5}\selectfont\fontsize{15}{15}\textit{В этом резюме я собрал общую информацию о себе, своих достижениях и проектах, которыми я горжусь!}
+	\end{tcolorbox}
+	\vspace{5pt}
+	% Само резюме без blank lines
+	\subsection*{Образование}
+	\textcolor{violet}{\textbf{Высшее}} (бакалавриат): 
+	\begin{itemize}
+		\item[$\blacktriangleright$] \textcolor{violet}{\textbf{МФТИ, 2023}},
+		\item[$\blacktriangleright$] направление \textit{прикладные математика и физика}, 
+		\item[$\blacktriangleright$] средний балл 8/10, "отлично"\ (подробнее см. Дополнение).
+	\end{itemize}
+	
+	\textcolor{violet}{\textbf{Высшее}} (магистратура):
+	\begin{itemize}
+		\item[$\blacktriangleright$] \textcolor{violet}{\textbf{МФТИ, 2025}},
+		\item[$\blacktriangleright$] направление \textit{прикладные математика и физика}, 
+		\item[$\blacktriangleright$] средний балл 8.6/10, "отлично"\ (подробнее см. Дополнение).
+	\end{itemize}
+	
+	\textcolor{violet}{\textbf{Дополнительное}}: Цифровая кафедра МФТИ, курс \textit{Основы глубокого обучения}, \textcolor{violet}{\textbf{2025}}.
+	
+	\textcolor{violet}{\textbf{Дополнительное}}: Deep Learning School (DLS), \href{https://stepik.org/course/230362/syllabus}{\textcolor{violet}{\textbf{первый семестр}}}, \textcolor{violet}{\textbf{весна 2025}}.
+	
+	В рамках дополнительного образования освоил: 
+	\begin{itemize}
+		\item[$\blacktriangleright$] Классическую теорию машинного обучения: оптимизационная и вероятностная постановки задачи машинного обучения, регрессия, классификация, дерево решений, метод опорных векторов, ансамблирование,
+		\item[$\blacktriangleright$] Основы глубокого обучения: MLP, CNN, RNN, обучение методом обратного распространения градиента, эвристики для метода стохастического градиента, (RMSprop, Adam, AdamW,...).
+		\item[$\blacktriangleright$] Решение задач компьютерного зрения: классификации, сегментирования и детектирования.
+	\end{itemize}
+	
+	\subsection*{Опыт работы}
+	
+	\textcolor{violet}{\textbf{Инженер}} в Центральном аэрогидродинамическом институте (ЦАГИ), \textcolor{violet}{\textbf{2021-2025}}. Исследовал численно и теоретически механизмы излучения аэродинамического звука в горячих потоках.
+	
+	
+	\textcolor{violet}{\textbf{Преподаватель олимпиадной физики}} в МФТИ, \textcolor{violet}{\textbf{2023}}. 
+	
+	\subsection*{Достижения}
+	\begin{itemize}
+	\item[\textcolor{violet}{\faTrophy}] Абсолютная победа в \href{https://www.figma.com/board/JqewkyeKxGNv3K8oA2SAdw}{\textcolor{violet}{\textbf{хакатоне}}} ЦК МФТИ, кейс \textit{Цифриум}, команда \textit{Конспектум}, \textcolor{violet}{\textbf{2025}}.
+	
+	Необходимо было создать сервис генерирующий конспект для учебного видео. В результате был создан \href{https://github.com/alex-petrov-git/konspektum}{\textcolor{violet}{\textbf{телеграм-бот}}}. 
+	
+	\item[\textcolor{violet}{\faTrophy}] Победитель олимпиады \textcolor{violet}{\textbf{Я-Профессионал}} по математическому моделированию, \textcolor{violet}{\textbf{2025}}.
+	
+	\item[\textcolor{violet}{\faRocket}] Создание и развитие телеграм-бота \href{https://t.me/faltuna_bot}{\textcolor{violet}{\textbf{Фалтуна}}}, \textcolor{violet}{\textbf{2025-н.в.}}
+	
+	Я создатель общего телеграм-чата (на 360 человек) моего факультета. Осознав сходство этого чата и твиттера я решил, что ему нужен свой Грок. Так была создана Фалтуна. На данный момент её основные функции: регистрация участников чата, модерация, канал связи с администрацией (теперь не студенты пересылают сообщения, а Фалтуна). 
+	
+	В ближайшем будущем планируется добавить: функционал записи в стиралку и к плотнику/сантехнику, сервис Random Coffee, помощь по учебным и бюрократическим вопросам.
+	
+	\item[\textcolor{violet}{\faRocket}] Развитие проекта \href{https://vk.com/botay_falt}{\textcolor{violet}{\textbf{BOTAY FALT}}}, \textcolor{violet}{\textbf{2020-2021}}.
+	
+	Этот проект был предназначен для агрегации учебных материалов в одном месте. Когда-то у Физтеха был бесконечный гугл-диск и на нем было удобно все складировать. Вокруг такого гугл-диска была создана группа вк, где публиковались различные подборки учебных материалов. Сейчас этот проект в заморозке, но в планах есть его возрождение в виде сервиса Фалтуны (stay tuned).
+	
+	\item[\textcolor{violet}{\faHeart}] Руководство \href{https://t.me/falt_basket}{\textcolor{violet}{\textbf{секцией баскетбола}}}, \textcolor{violet}{\textbf{2019-2024}}.
+	
+	Секция баскетбола это мое место силы на Физтехе. Здесь я не только отдыхал от учебы, но и познакомился с кучей крутых ребят, а также впервые почувствовал себя в роли лидера команды (и вырос как личность, я считаю).
+	
+	До 2023 года мы занимались без тренера и просто играли. Однако, после досадного поражения на соревнованиях нам захотелось играть лучше, а для этого 100\% нужен тренер. Мне, как старосте, необходимо было решить этот вопрос. 
+	
+	TL;DR\\ Я нашел спонсоров и тренера, мы отремонтировали площадку, закупили новый инвентарь, осенью провели крутой открытый турнир на котором собрали новую команду факультета, а весной мы заняли 2-е место на межфакультетских соревнованиях МФТИ.
+	
+	\end{itemize}
+	
+	
+	
+	
+	\newpage 
+	
+	\subsection*{Дополнение}
+	
+	\subsubsection*{Высшая математика}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	Аналитическая геометрия & 3 & Отлично \\
+	Введение в математический анализ & 6 & Отлично \\
+	Гармонический анализ & 3 & Отлично \\
+	Дискретная математика & 3 & Отлично \\
+	Дифференциальные уравнения & 6 & Отлично \\
+	Кратные интегралы и теория поля & 3 & Отлично \\
+	Линейная алгебра & 3 & Отлично \\
+	Математические методы планирования и интерпретации эксперимента & 4 & Отлично \\
+	Многомерный анализ, интегралы и ряды & 6 & Отлично \\
+	Теория вероятностей & 2 & Отлично \\
+	Теория функций комплексного переменного & 4 & Отлично \\
+	Уравнения математической физики & 7 & Отлично \\
+	\bottomrule
+	\end{tabular}}
+	
+	\subsubsection*{Общая и теоретическая физика}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	Аналитическая механика & 7 & Отлично \\
+	Квантовая механика & 4 & Хорошо \\
+	Кинетическая теория газов & 3 & Отлично \\
+	Колебания и волны & 2 & Хорошо \\
+	Общая физика: квантовая физика & 2 & Хорошо \\
+	Общая физика: лабораторный практикум & 15 & Хорошо \\
+	Общая физика: механика & 4 & Хорошо \\
+	Общая физика: оптика & 4 & Отлично \\
+	Общая физика: термодинамика и молекулярная физика & 4 & Отлично \\
+	Общая физика: электричество и магнетизм & 5 & Отлично \\
+	Основы современной физики & 3 & Удовл. \\
+	Основы современной физики: лабораторный практикум & 2 & Хорошо \\
+	Статистическая физика & 3 & Хорошо \\
+	Теория поля & 2 & Отлично \\
+	\bottomrule
+	\end{tabular}}
+	
+	\subsubsection*{Компьютерные науки}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	Вычислительная математика & 6 & Хорошо \\
+	Вычислительные методы в механике & 2 & Отлично \\
+	Информатика & 7 & Отлично \\
+	Компьютерные технологии & 6 & Отлично \\
+	Метод конечных элементов в задачах вычислительной аэродинамики & 2 & Отлично \\
+	Нейросетевые технологии и robust-оптимизация в задачах аэродинамики & 3 & Отлично \\
+	Цифровая обработка сигнала и теория управления & 5 & Хорошо \\
+	\bottomrule
+	\end{tabular}}
+
+	\subsubsection*{Общеобразовательные дисциплины}
+	{\fontsize{9}{11}\selectfont
+		\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+			\toprule
+			\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+			\midrule
+			Безопасность жизнедеятельности & 1 & Зачтено \\
+			Быть зрителем & 3 & Отлично \\
+			История & 1 & Хорошо \\
+			Логика и аргументация & 2 & Отлично \\
+			Основы политологии & 1 & Хорошо \\
+			Правоведение & 1 & Отлично \\
+			Философия & 1 & Хорошо\footnotemark  \\
+			Экономика & 2 & Отлично \\
+			\bottomrule
+	\end{tabular}}
+
+	\footnotetext[1]{Я получил хор по философии потому, что наш преподаватель, который считает что человечество станет счастливее если уйдет в пещеры, также считает, что "Гарри Поттер и Методы Рационального Мышления"\ Юдковского нельзя было использовать при написании реферата, потому что это не философский текст, а фигня. По политологии и истории похожая ситуация $-$ преподаватели абсолютно некомпетентны и застряли в совке.}
+	
+	\subsubsection*{Английский язык и физическая культура}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	Иностранный язык (Английский язык, уровень В2) & 17 & Хорошо \\
+	Иностранный язык (Английский язык, Межкультурная коммуникация) & 4 & Хорошо \\
+	Физическая культура & 2 & Зачтено \\
+	\bottomrule
+	\end{tabular}}
+	
+	\subsubsection*{Специальные курсы (аэродинамика и смежные дисциплины)}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	Акустика кабин летательных аппаратов & 2 & Отлично \\
+	Асимптотическая теория отрыва & 2 & Отлично \\
+	Аэроакустика & 4 & Отлично \\
+	Аэродинамика больших скоростей & 3 & Отлично \\
+	Аэродинамика органов управления & 1 & Хорошо \\
+	Аэродинамическое нагревание & 3 & Хорошо \\
+	Введение в аэродинамику & 3 & Отлично \\
+	Введение в физику полета и авиационные технологии & 1 & Отлично \\
+	Вихревые и отрывные течения & 5 & Отлично \\
+	Гидродинамика морских летательных аппаратов & 2 & Отлично \\
+	Гидродинамическая устойчивость & 4 & Отлично \\
+	Динамика вязкого газа & 6 & Отлично \\
+	Динамика полета & 2 & Хорошо \\
+	Динамика разреженного газа & 3 & Отлично \\
+	Основы инженерной подготовки & 5 & Отлично \\
+	Основы прочности & 3 & Отлично \\
+	Основы турбулентного пограничного слоя & 2 & Отлично \\
+	Прикладная газовая динамика & 2 & Отлично \\
+	Прочность летательных аппаратов & 4 & Удовл. \\
+	Теоретическая гидродинамика & 7 & Отлично \\
+	Техника и методика аэродинамического эксперимента & 8 & Хорошо \\
+	Управление исследованиями и разработками & 2 & Отлично \\
+	Управление течением жидкости & 1 & Хорошо \\
+	Физическое и численное моделирование турбулентности & 4 & Отлично \\
+	Нестационарная аэродинамика летательных аппаратов & 1 & Отлично \\
+	\bottomrule
+	\end{tabular}}
+	
+\end{document}
