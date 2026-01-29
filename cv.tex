@@ -19,8 +19,11 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes}
 
+\usepackage{enumitem}
 
 
+% Настройка: фиолетовая стрелочка для всех списков
+\setlist[itemize]{label=\textcolor{violet}{\small\faAngleRight}, leftmargin=1.5em, itemsep=0.5ex}
 
 
 \setmainfont{Calibri}
@@ -66,14 +69,14 @@
 			
 			% блок контактов
 			\begin{tabular}{@{}l l l l@{}}
-				\faMapMarker\ & \raisebox{0.1ex}{{\href{https://yandex.ru/maps/-/CHtXE-JQ}{Москва, Зюзино}}} 
+				\faMapMarker\ & \raisebox{0.1ex}{{\href{https://yandex.ru/maps/-/CHtXE-JQ}{Москва}}} 
 				& \faEnvelope\ & \raisebox{0.2ex}{\href{mailto:petrov.aleksandr@phystech.edu}{petrov.aleksandr@phystech.edu}} \\
 			\end{tabular}
 			
 			\vspace{0.2cm}
 			\begin{tabular}{@{}l l l l l l@{}}
 				\faPhone\ & \href{tel:+79251457290}{+79251457290} 
-				& \faTelegram\ & \raisebox{0.2ex}{\href{https://t.me/petrovortex}{@petrovortex}} & \faGithub\ & \raisebox{0.2ex}{\href{https://github.com/alex-petrov-git}{alex-petrov-git}} \\
+				& \faTelegram\ & \raisebox{0.2ex}{\href{https://t.me/petrovortex}{@petrovortex}} & \faGithub\ & \raisebox{0.2ex}{\href{https://github.com/petrovortex}{petrovortex}} \\
 			\end{tabular}
 		\end{minipage}
 		\hfill
@@ -107,76 +110,49 @@
 	% Само резюме без blank lines
 	
 	\subsection*{What I do}
-	Сейчас\footnote{Октябрь 2025} я изучаю NLP, а также углубляю знания по базовому ML и теории вероятностей:
-	\begin{itemize}
-	\item[\faArrowRight] DLS-2: \href{https://stepik.org/course/251729/syllabus}{\textcolor{violet}{\textbf{NLP}}}\footnote{Здесь и далее присутствуют ссылки, на них можно тыкнуть.}
-	\item[\faArrowRight] \href{http://www.machinelearning.ru/wiki/index.php?title=%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%28%D0%BA%D1%83%D1%80%D1%81_%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B9%2C_%D0%9A.%D0%92.%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D1%86%D0%BE%D0%B2%29}{\textcolor{violet}{\textbf{Математические Основы Машинного Обучения}}} (МФТИ, курс Воронцова К.В.)
-	\item[\faArrowRight] \href{https://mccme.ru/ru/nmu/courses-of-nmu/osen-20252026/nmu_autumn2025_terver/}{\textcolor{violet}{\textbf{Теория вероятностей}}} (НМУ, курс Шапошникова С.В.)	
-	\end{itemize}
-
+	О моих текущих проектах пишу в \href{https://petrovortex.github.io/}{\textbf{блоге}}.
 	
-	\subsection*{Образование}
-	\textcolor{violet}{\textbf{Высшее}} (бакалавриат): 
+	\subsection*{\faGraduationCap\ Образование}
+	\textcolor{violet}{\textbf{Высшее}}: 
 	\begin{itemize}
-		\item[\faCheck] \textcolor{violet}{\textbf{МФТИ, 2023}},
-		\item[\faCheck] направление \textit{прикладные математика и физика}, 
-		\item[\faCheck] средний балл 8/10, "отлично"\ (подробнее см. Дополнение).
+		\item Бакалавриат \textcolor{violet}{\textbf{МФТИ, 2023}}, \textit{прикладные математика и физика}, \textcolor{violet}{\textbf{GPA 4.7}}
+		\item Магистратура \textcolor{violet}{\textbf{МФТИ, 2025}}, \textit{прикладные математика и физика}, \textcolor{violet}{\textbf{GPA 4.9}}
 	\end{itemize}
 	
-	\textcolor{violet}{\textbf{Высшее}} (магистратура):
+	\textcolor{violet}{\textbf{Дополнительное}}:
 	\begin{itemize}
-		\item[\faCheck] \textcolor{violet}{\textbf{МФТИ, 2025}},
-		\item[\faCheck] направление \textit{прикладные математика и физика}, 
-		\item[\faCheck] средний балл 8.6/10, "отлично"\ (подробнее см. Дополнение).
+		\item Deep Learning School (DLS): \href{https://stepik.org/course/230362/syllabus}{\textcolor{violet}{\textbf{СV}}} (весна 2025), \href{https://stepik.org/course/251729/syllabus}{\textcolor{violet}{\textbf{NLP}}} (осень 2025)
+	\end{itemize} 
+	
+	\subsection*{\faBriefcase\ Опыт работы}
+	% Оставил инженера в itemize для единого выравнивания стрелочкой
+	\begin{itemize}
+		\item \textcolor{violet}{\textbf{Инженер}} в Центральном аэрогидродинамическом институте (ЦАГИ), \textcolor{violet}{\textbf{2021-2025}}. Исследовал численно и теоретически механизмы излучения аэродинамического звука в горячих потоках. 
 	\end{itemize}
 	
-	\textcolor{violet}{\textbf{Дополнительное}}: Цифровая кафедра МФТИ, курс \textit{Основы глубокого обучения}, \textcolor{violet}{\textbf{2025}}.
-	
-	\textcolor{violet}{\textbf{Дополнительное}}: Deep Learning School (DLS), \href{https://stepik.org/course/230362/syllabus}{\textcolor{violet}{\textbf{первый семестр}}}, \textcolor{violet}{\textbf{весна 2025}}.
-	
-	В рамках дополнительного образования познакомился с: 
+	\subsection*{\faTrophy\ Достижения}
 	\begin{itemize}
-		\item[\faCheck] Классической теорией машинного обучения: оптимизационная и вероятностная постановки задачи машинного обучения, регрессия, классификация, дерево решений, метод опорных векторов, ансамблирование,
-		\item[\faCheck] Основами глубокого обучения: MLP, CNN, RNN, обучение методом обратного распространения градиента, эвристики для метода стохастического градиента, (RMSprop, Adam, AdamW,...), автоэнкодеры, генеративно-состязательные сети (GANs),
-		\item[\faCheck] Решением задач компьютерного зрения: классификация, сегментирование и детектирование.
+		\item Победа в соревнованиях на \textcolor{violet}{\textbf{kaggle}} (\href{https://www.kaggle.com/competitions/fall-ml-4-mipt-2025/leaderboard}{\textbf{раз}}, \href{https://www.kaggle.com/competitions/fall-ml-6-mipt-2025/leaderboard}{\textbf{два}}).
+		\item Победа в \href{https://www.figma.com/board/JqewkyeKxGNv3K8oA2SAdw}{\textcolor{violet}{\textbf{хакатоне}}} МФТИ, кейс \textit{Цифриум}, команда \textit{Конспектум}, \textcolor{violet}{\textbf{2025}}. \\
+		Необходимо было создать сервис генерирующий конспект для учебного видео. В результате был создан \href{https://github.com/petrovortex/konspektum}{\textcolor{violet}{\textbf{телеграм-бот}}}. 
+		
+		\item Победитель олимпиады \textcolor{violet}{\textbf{Я-Профессионал}} по математическому моделированию, \textcolor{violet}{\textbf{2025}}.
 	\end{itemize}
 	
-	\subsection*{Опыт работы}
-	
-	\textcolor{violet}{\textbf{Инженер}} в Центральном аэрогидродинамическом институте (ЦАГИ), \textcolor{violet}{\textbf{2021-2025}}. Исследовал численно и теоретически механизмы излучения аэродинамического звука в горячих потоках.
-	
-	
-	\textcolor{violet}{\textbf{Преподаватель олимпиадной физики}} в МФТИ, \textcolor{violet}{\textbf{2023}}. 
-	
-	\subsection*{Достижения}
+	\subsection*{\faHeart\ Хобби}
 	\begin{itemize}
-	\item[\textcolor{violet}{\faTrophy}] Победа в \href{https://www.figma.com/board/JqewkyeKxGNv3K8oA2SAdw}{\textcolor{violet}{\textbf{хакатоне}}} ЦК МФТИ, кейс \textit{Цифриум}, команда \textit{Конспектум}, \textcolor{violet}{\textbf{2025}}.
-	
-	Необходимо было создать сервис генерирующий конспект для учебного видео. В результате был создан \href{https://github.com/alex-petrov-git/konspektum}{\textcolor{violet}{\textbf{телеграм-бот}}}. 
-	
-	\item[\textcolor{violet}{\faTrophy}] Победитель олимпиады \textcolor{violet}{\textbf{Я-Профессионал}} по математическому моделированию, \textcolor{violet}{\textbf{2025}}.
-	
-	\item[\textcolor{violet}{\faRocket}] Создание и развитие телеграм-бота \href{https://t.me/faltuna_bot}{\textcolor{violet}{\textbf{Фалтуна}}}, \textcolor{violet}{\textbf{2025-н.в.}}
-	
-	Я создатель общего телеграм-чата (на 360 человек) моего факультета. Осознав сходство этого чата и твиттера я решил, что ему нужен свой Грок. Так была создана Фалтуна. На данный момент её основные функции: регистрация участников чата, модерация, канал связи с администрацией (теперь не студенты пересылают сообщения, а Фалтуна). 
-	
-	В ближайшем будущем планируется добавить: функционал записи в стиралку и к плотнику/сантехнику, сервис Random Coffee, помощь по учебным и бюрократическим вопросам.
-	
-	\item[\textcolor{violet}{\faRocket}] Развитие проекта \href{https://vk.com/botay_falt}{\textcolor{violet}{\textbf{BOTAY FALT}}}, \textcolor{violet}{\textbf{2020-2021}}.
-	
-	Этот проект был предназначен для агрегации учебных материалов в одном месте. Когда-то у Физтеха был бесконечный гугл-диск и на нем было удобно все складировать. Вокруг такого гугл-диска была создана группа вк, где публиковались различные подборки учебных материалов. Сейчас этот проект в заморозке, но в планах есть его возрождение в виде сервиса Фалтуны (stay tuned).
-	
-	\item[\textcolor{violet}{\faHeart}] Руководство \href{https://t.me/falt_basket}{\textcolor{violet}{\textbf{секцией баскетбола}}}, \textcolor{violet}{\textbf{2019-2024}}.
-	
-	Секция баскетбола это мое место силы на Физтехе. Здесь я не только отдыхал от учебы, но и познакомился с кучей крутых ребят, а также впервые почувствовал себя в роли лидера команды (и вырос как личность, я считаю).
-	
-	До 2023 года мы занимались без тренера и просто играли. Однако, после досадного поражения на соревнованиях нам захотелось играть лучше, а для этого 100\% нужен тренер. Мне, как старосте, необходимо было решить этот вопрос. 
-	
-	TL;DR\\ Я нашел спонсоров и тренера, мы отремонтировали площадку, закупили новый инвентарь, осенью провели крутой открытый турнир на котором собрали новую команду факультета, а весной мы заняли 2-е место на межфакультетских соревнованиях МФТИ.
-	
+		\item Занимаюсь \textcolor{violet}{\textbf{баскетболом}}, был старостой секции. \\
+		Секция баскетбола это мое место силы на Физтехе. Здесь я не только отдыхал от учебы, но и познакомился с кучей крутых ребят, а также впервые почувствовал себя в роли лидера команды (и вырос как личность, я считаю).
+		
+		До 2023 года мы занимались без тренера и просто играли. Однако, после досадного поражения на соревнованиях нам захотелось играть лучше, а для этого 100\% нужен тренер. Мне, как старосте, необходимо было решить этот вопрос. 
+		
+		TL;DR: Я нашел спонсоров и тренера, мы отремонтировали площадку, закупили новый инвентарь, осенью провели крутой открытый турнир на котором собрали новую команду факультета, а весной мы заняли 2-е место на межфакультетских соревнованиях МФТИ.
+		
+		\item Развитие проекта \href{https://vk.com/botay_falt}{\textcolor{violet}{\textbf{BOTAY FALT}}}, \textcolor{violet}{\textbf{2020-2021}}. \\
+		Этот проект был предназначен для агрегации учебных материалов в одном месте. Когда-то у Физтеха был бесконечный гугл-диск и на нем было удобно все складировать. Вокруг такого гугл-диска была создана группа вк, где публиковались различные подборки учебных материалов и полезных статей.
+		
+		\item Преподавал разные предметы разным аудиториям: школьная физика для 8 физмат класса (весна 2021), авторский курс по гидродинамике для 3 курса МФТИ (осень 2021) \textcolor{violet}{\textbf{школьную олимпиадную физику}} в МФТИ (2023).
 	\end{itemize}
-	
-	
 	
 	
 	\newpage 
@@ -203,6 +179,23 @@
 	Уравнения математической физики & 7 & Отлично \\
 	\bottomrule
 	\end{tabular}}
+
+	\subsubsection*{Компьютерные науки}
+	{\fontsize{9}{11}\selectfont
+	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
+	\toprule
+	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
+	\midrule
+	\textcolor{violet}{Математические основы машинного обучения} & 5 & Отлично \\
+	Вычислительная математика & 6 & Хорошо \\
+	Вычислительные методы в механике & 2 & Отлично \\
+	Информатика & 7 & Отлично \\
+	Компьютерные технологии & 6 & Отлично \\
+	Метод конечных элементов в задачах вычислительной аэродинамики & 2 & Отлично \\
+	Нейросетевые технологии и robust-оптимизация в задачах аэродинамики & 3 & Отлично \\
+	Цифровая обработка сигнала и теория управления & 5 & Хорошо \\
+	\bottomrule
+	\end{tabular}}
 	
 	\subsubsection*{Общая и теоретическая физика}
 	{\fontsize{9}{11}\selectfont
@@ -226,22 +219,6 @@
 	Теория поля & 2 & Отлично \\
 	\bottomrule
 	\end{tabular}}
-	
-	\subsubsection*{Компьютерные науки}
-	{\fontsize{9}{11}\selectfont
-	\begin{tabular}{p{0.7\textwidth} p{0.05\textwidth} p{0.08\textwidth}}
-	\toprule
-	\textbf{Дисциплина} & \textbf{З.Е.} & \textbf{Оценка} \\
-	\midrule
-	Вычислительная математика & 6 & Хорошо \\
-	Вычислительные методы в механике & 2 & Отлично \\
-	Информатика & 7 & Отлично \\
-	Компьютерные технологии & 6 & Отлично \\
-	Метод конечных элементов в задачах вычислительной аэродинамики & 2 & Отлично \\
-	Нейросетевые технологии и robust-оптимизация в задачах аэродинамики & 3 & Отлично \\
-	Цифровая обработка сигнала и теория управления & 5 & Хорошо \\
-	\bottomrule
-	\end{tabular}}
 
 	\subsubsection*{Общеобразовательные дисциплины}
 	{\fontsize{9}{11}\selectfont
@@ -259,8 +236,6 @@
 			Экономика & 2 & Отлично \\
 			\bottomrule
 	\end{tabular}}
-
-	\footnotetext[1]{Я получил хор по философии потому, что наш преподаватель, который считает что человечество станет счастливее если уйдет в пещеры, также считает, что "Гарри Поттер и Методы Рационального Мышления"\ Юдковского нельзя было использовать при написании реферата, потому что это не философский текст, а фигня. По политологии и истории похожая ситуация.}
 	
 	\subsubsection*{Английский язык и физическая культура}
 	{\fontsize{9}{11}\selectfont
